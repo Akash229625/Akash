@@ -1,0 +1,495 @@
+`movie_streaming.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Watch & Share Movies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles */
+        .movie-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .upload-modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-content {
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray失误，我会完整地重写代码并确保一次性提供完整的文件内容。以下是修正后的代码：
+
+<create_file>
+<path>movie_streaming.html</path>
+<content>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Watch & Share Movies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .movie-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .upload-modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-content {
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 py-4 px-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="fas fa-film text-red-500 text-2xl"></i>
+                <span class="text-xl font-bold bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text text-transparent">MovieFlix</span>
+            </a>
+            <div class="flex space-x-4">
+                <button id="uploadBtn" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-md transition flex items-center">
+                    <i class="fas fa-upload mr-2"></i> Upload Movie
+                </button>
+                <a href="#" class="px-3 py-2 hover:text-red-400 transition">Home</a>
+                <a href="#" class="px-3 py-2 hover:text-red-400 transition">Popular</a>
+                <a href="#" class="px-3 py-2 hover:text-red-400 transition">Categories</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="video-container bg-black">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3a09e9f0-1603-48a0-8f22-8cb5a2642b7d.png" alt="Movie theater with large screen showing action scene, red velvet seats in foreground" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10 pt-40 pb-20">
+            <h1 class="text-5xl font-bold mb-4">Unlimited Movies</h1>
+            <p class="text-xl mb-8 max-w-2xl">Watch and share your favorite movies with everyone. Upload once and let the world enjoy your collection.</p>
+            <button class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-md text-lg font-semibold transition">Browse Movies</button>
+        </div>
+    </section>
+
+    <!-- Movie Section -->
+    <section class="py-12 container mx-auto px-6">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold">Latest Movies</h2>
+            <a href="#" class="text-red-400 hover:text-red-300 flex items-center">
+                View All <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <!-- Movie Card 1 -->
+            <div class="movie-card bg-gray-800 rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dea1b448-073d-429e-b116-436ab9499cdb.png" alt="Action movie poster showing hero in black suit with futuristic city background" class="w-full h-64 object-cover" />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex items-center justify-center">
+                        <button class="play-btn bg-red-600 hover:bg-red-700 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-1">Midnight Run</h3>
+                    <div class="flex justify-between text-gray(i'll complete the movie cards section now):
+
+400 text-sm">
+                        <span>2023</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i> 8.2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 2 -->
+            <div class="movie-card bg-gray-800 rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ad909e37-af41-4520-8d2f-5178ecf3520b.png" alt="Comedy movie poster with colorful text and actors making funny faces" class="w-full h-64 object-cover" />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex items-center justify-center">
+                        <button class="play-btn bg-red-600 hover:bg-red-700 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-1">Laugh Out Loud</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2022</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i> 7.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 3 -->
+            <div class="movie-card bg-gray-800 rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c46ca21b-652d-446b-8046-25702749fe05.png" alt="Drama movie poster with silhouetted figures against sunset" class="w-full h-64 object-cover" />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex items-center justify-center">
+                        <button class="play-btn bg-red-600 hover:bg-red-700 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-1">The Last Sunset</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2023</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i> 9.1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 4 -->
+            <div class="movie-card bg-gray-800 rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/173bd905-6640-413e-a9d4-d41032ac5cde.png" alt="Sci-fi movie poster with spaceship hovering over alien landscape" class="w-full h-64 object-cover" />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex items-center justify-center">
+                        <button class="play-btn bg-red-600 hover:bg-red-700 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-1">Galactic Journey</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2024</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i> 8.7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 5 -->
+            <div class="movie-card bg-gray-800 rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/78275397-04a3-4aae-9560-22eae0d5ee19.png" alt="Horror movie poster with dark hallway and shadowy figure at the end" class="w-full h-64 object-cover" />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex items-center justify-center">
+                        <button class="play-btn bg-red-600 hover:bg-red-700 w-12 h-12 rounded-full flex items-center justify-center">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-1">The Dark Hallway</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2023</span>
+                        <span><i class="fas fa-star text-yellow-400 mr-1"></i> 7.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="py-12 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8">Browse by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="#" class="category-card bg-gray-700 hover:bg-gray-600 rounded-lg p-6 text-center transition">
+                    <i class="fas fa-explosion text-2xl mb-2 text-red-500"></i>
+                    <h3 class="font-medium">Action</h3>
+                </a>
+                <a href="#" class="category-card bg-gray-700 hover:bg-gray-600 rounded-lg p-6 text-center transition">
+                    <i class="fas fa-laugh-squint text-2xl mb-2 text-yellow-400"></i>
+                    <h3 class="font-medium">Comedy</h3>
+                </a>
+                <a href="#" class="category-card bg-gray-700 hover:bg-gray-600 rounded-lg p-6 text-center transition">
+                    <i class="fas fa-heart text-2xl mb-2 text-pink-500"></i>
+                    <h3 class="font-medium">Romance</h3>
+                </a>
+                <a href="#" class="category-card bg-gray-700 hover:bg-gray-600 rounded-lg p-6 text-center transition">
+                    <i class="fas fa-ghost text-2xl mb-2 text-purple-500"></i>
+                    <h3 class="font-medium">Horror</h3>
+                </a>
+                <a href="#" class="category-card bg-gray-700 hover:bg-gray-600 rounded-lg p-6 text-center transition">
+                    <i class="fas fa-rocket text-2xl mb-2 text-blue-400"></i>
+                    <h3 class="font-medium">Sci-Fi</h3>
+                </a>
+                <a href="#" class="category-card bg-gray-700 hover:bg-gray-600 rounded-lg p-6 text-center transition">
+                    <i class="fas fa-theater-masks text-2xl mb-2 text-green-400"></i>
+                    <h3 class="font-medium">Drama</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Modal -->
+    <div id="uploadModal" class="upload-modal fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 opacity-0 invisible transition">
+        <div class="modal-content bg-gray-800 rounded-lg max-w-2xl w-full p-6 mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Upload Movie</h2>
+                <button id="closeModal" class="text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <form id="uploadForm">
+                <div class="mb-4">
+                    <label class="block text-gray-300 mb-2">Movie Title</label>
+                    <input type="text" class="w-full bg-gray-700 border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-300 mb-2">Description</label>
+                    <textarea class="w-full bg-gray-700 border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 h-24" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-300 mb-2">Category</label>
+                    <select class="w-full bg-gray-700 border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500" required>
+                        <option value="">Select Category</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="romance">Romance</option>
+                        <option value="horror">Horror</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="drama">Drama</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-300 mb-2">Movie File</label>
+                    <div class="border-2 border-dashed border-gray-600 rounded-md p-8 text-center">
+                        <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+                        <p class="text-gray-400 mb-2">Drag & drop your movie file here</p>
+                        <p class="text-gray-500 text-sm mb-4">or</p>
+                        <label for="fileInput" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md cursor-pointer transition">
+                            Browse Files
+                        </label>
+                        <input id="fileInput" type="file" class="hidden" accept="video/*" required>
+                    </div>
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button type="button" id="cancelUpload" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md transition">
+                        Cancel
+                    </button>
+                    <button type="submit" class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-md transition">
+                        Upload Movie
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Player Modal -->
+    <div id="playerModal" class="upload-modal fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 opacity-0 invisible transition">
+        <div class="modal-content bg-transparent max-w-6xl w-full p-4 mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="movieTitle" class="text-xl font-bold">Movie Title</h2>
+                <button id="closePlayer" class="text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="video-container bg-black rounded-md overflow-hidden">
+                <video id="moviePlayer" controls class="w-full">
+                    <!-- Video source would be inserted here by JavaScript -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-film text-red-500 text-2xl"></i>
+                        <span class="text-xl font-bold">MovieFlix</span>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">
+                        The best place to share and watch movies with your friends and the world.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">Home</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">Popular</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">Categories</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">Upload</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">Cookie Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-red-400 transition">DMCA</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-red-400 transition text-xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-red-400 transition text-xl">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-red-400 transition text-xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-red-400 transition text-xl">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2023 MovieFlix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functionality
+        const uploadBtn = document.getElementById('uploadBtn');
+        const closeModal = document.getElementById('closeModal');
+        const cancelUpload = document.getElementById('cancelUpload');
+        const uploadModal = document.getElementById('uploadModal');
+        
+        const playBtns = document.querySelectorAll('.play-btn');
+        const closePlayer = document.getElementById('closePlayer');
+        const playerModal = document.getElementById('playerModal');
+        const moviePlayer = document.getElementById('moviePlayer');
+        const movieTitle = document.getElementById('movieTitle');
+
+        // Upload modal controls
+        uploadBtn.addEventListener('click', () => {
+            uploadModal.classList.remove('invisible', 'opacity-0');
+            uploadModal.classList.add('opacity-100');
+        });
+
+        [closeModal, cancelUpload].forEach(btn => {
+            btn.addEventListener('click', () => {
+                uploadModal.classList.remove('opacity-100');
+                uploadModal.classList.add('opacity-0', 'invisible');
+            });
+        });
+
+        // Player modal controls
+        playBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const card = e.target.closest('.movie-card');
+                const title = card.querySelector('h3').textContent;
+                
+                movieTitle.textContent = title;
+                
+                // In a real app, we would set the video source here
+                // moviePlayer.src = '/path/to/movie-file.mp4';
+                
+                playerModal.classList.remove('invisible', 'opacity-0');
+                playerModal.classList.add('opacity-100');
+                // moviePlayer.play();
+            });
+        });
+
+        closePlayer.addEventListener('click', () => {
+            playerModal.classList.remove('opacity-100');
+            playerModal.classList.add('opacity-0', 'invisible');
+            // moviePlayer.pause();
+        });
+
+        // Form submission
+        const uploadForm = document.getElementById('uploadForm');
+        uploadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real app, we would handle the file upload here
+            // This is just a demonstration of the UI
+            
+            alert('Movie uploaded successfully! (This is a demo. In a real app, the file would be sent to a server)');
+            uploadModal.classList.remove('opacity-100');
+            uploadModal.classList.add('opacity-0', 'invisible');
+            uploadForm.reset();
+        });
+
+        // Drag and drop file upload
+        const dropZone = document.querySelector('.border-dashed');
+        const fileInput = document.getElementById('fileInput');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.add('border-red-400', 'bg-gray-700');
+        }
+
+        function unhighlight(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.remove('border-red-400', 'bg-gray-700');
+        }
+
+        dropZone.addEventListener('drop', (e) => {
+            const files = e.dataTransfer.files;
+            if (files.length) {
+                fileInput.files = files;
+                // You could add a preview of the selected file here
+            }
+        });
+    </script>
+</body>
+</html>
+
+```
